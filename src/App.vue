@@ -63,12 +63,11 @@
 
 </header>
 
-<RouterView class="md:px-24 px-8 mt-[10em]" v-slot="{ Component }">
+<RouterView class="md:px-24 px-8 my-[10em]" v-slot="{ Component }">
   <transition name="fade" mode="out-in">
     <component :is="Component" ></component>
   </transition>
 </RouterView>
-
 
 </template>
 
