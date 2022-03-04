@@ -1,0 +1,1 @@
+import{d as t,o,c as s,a as e}from"./vendor.edf87009.js";const c={class:"border-l pl-2 flex flex-col space-y-10 my-10"},a=e("h1",{class:"text-4xl font-semibold tracking-wider text-center"}," My Blog ",-1),r=e("p",{class:"text-center text-lg"}," Look forward to my adventure ",-1),n=[a,r],p=t({setup(l){return(d,_)=>(o(),s("div",c,n))}});export{p as default};
