@@ -4,16 +4,17 @@
   import HelloWorld from '@/components/HelloWorld.vue'
   import Logos from '@/components/Logos.vue'
   import SunIcon from '@/components/icons/IconSun.vue'
-    const navClick = ref(true)
-     const isActive = ref(false)
+  const navClick = ref(true)
+  const isActive = ref(false)
+  const isDark = ref(false)
 </script>
 
 
 <template>
-
+  <div :class="isDark ? 'dark' : '' " class="transition-colors ease-in duration-700">
   <header class="fixed top-0  z-10 h-20" v-show="$route.path!=='/'"> 
 
-    <nav class="fixed flex flex-row bg-white top-0 md:px-24 px-8 md:py-10 py-6 w-full">
+    <nav class="fixed flex flex-row bg-white top-0 md:px-24 px-8 md:py-10 py-6 w-full dark:bg-gray-700 border-b border-gray-200 dark:text-gray-100">
       <div class="md:flex hidden flex-row justify-between w-full items-center">
         <RouterLink to="/">
           <img src="@/assets/logo.svg" class="h-14">
@@ -23,8 +24,9 @@
           <RouterLink :class="{ isActive:$route.path==='/portfolio' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/portfolio">Portfolio</RouterLink>
           <RouterLink :class="{ isActive:$route.path==='/blog' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/blog">Blog</RouterLink>
           <RouterLink :class="{ isActive:$route.path==='/about' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/about">About</RouterLink>       
-          <button class="bg-gray-100 rounded-full p-2 h-min flex hover:bg-gray-700 hover:stroke-white duration-300 w-min m-auto">
-            <SunIcon class="w-6 h-6" />
+          <button @click="isDark = !isDark" class="bg-gray-100 rounded-full p-2 h-min flex hover:bg-gray-700 hover:stroke-white duration-300 w-min m-auto">
+            <SunIcon v-if="isDark" class="w-6 h-6" />
+            <SunIcon v-else class="w-6 h-6 text-red-600"/>
           </button>
         </div>
       </div>
@@ -63,12 +65,12 @@
 
 </header>
 
-<RouterView class="md:px-24 px-8 my-[10em]" v-slot="{ Component }">
+<RouterView class="md:px-24 px-8 pt-[10em] dark:bg-gray-700 dark:text-white" v-slot="{ Component }">
   <transition name="fade" mode="out-in">
     <component :is="Component" ></component>
   </transition>
 </RouterView>
-
+</div>
 </template>
 
 <style>

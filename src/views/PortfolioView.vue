@@ -1,13 +1,13 @@
 <template>
-	<main class="md:w-11/12 w-full grid gap-20 md:gap-28">
-		<div class="flex flex-col space-y-2 items-center justify-center text-lg text-center md:text-left"> 
+	<main class="w-full grid gap-20 md:gap-28">
+		<div class="flex flex-col space-y-2 items-center justify-center text-lg text-center md:text-left md:mt-20"> 
 		<label class="text-5xl font-semibold tracking-wider text-center">Portfolio</label>
 		<label>My personal and team projects, always there if you need.</label>
 		</div>
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10 hover:shadow-md rounded-2xl duration-300">
 			<div class="md:w-6/12 w-full relative">
 				<img class="h-full object-fill w-full rounded-2xl" src="../assets/images/salsproject.jpg">
-				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur ">2022</label>
+				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur dark:text-gray-700">2022</label>
 			</div>
 
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -31,7 +31,7 @@
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row-reverse space-x-reverse">
 			<div class="md:w-6/12 w-full relative">
 				<img class="h-80 object-cover rounded-2xl" src="../assets/images/management.jpg">
-				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute">2021</label>
+				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute dark:text-gray-700">2021</label>
 			</div>
 			
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -55,7 +55,7 @@
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300">
 			<div class="md:w-6/12 w-full relative ">
 				<img class="h-80 object-cover rounded-2xl" src="../assets/images/attendance.jpg">
-				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur ">2022</label>
+				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur dark:text-gray-700">2022</label>
 			</div>
 
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -80,7 +80,7 @@
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row-reverse space-x-reverse">
 			<div class="md:w-6/12 w-full relative">
 				<img class="h-80 object-cover rounded-2xl" src="../assets/images/catering.jpg">
-				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute">2021</label>
+				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute dark:text-gray-700">2021</label>
 			</div>
 			
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -104,7 +104,7 @@
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300">
 			<div class="md:w-6/12 w-full relative">
 				<img class="h-80 object-cover w-full rounded-2xl" src="../assets/images/ajt.jpg">
-				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur ">2020</label>
+				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur dark:text-gray-700">2020</label>
 			</div>
 
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -127,7 +127,7 @@
 		<div class="flex space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row-reverse space-x-reverse">
 			<div class="w-6/12 relative">
 				<img class="h-full object-cover rounded-2xl" src="../assets/images/employee.jpg">
-				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute">2019</label>
+				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute dark:text-gray-700">2019</label>
 			</div>
 			
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -151,8 +151,8 @@
 
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row space-x">
 			<div class="md:w-6/12 w-full relative">
-				<img class="h-80 object-cover rounded-2xl" src="../assets/images/cabai.jpg">
-				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur ">2019</label>
+				<img class="h-full w-full object-cover rounded-2xl" src="../assets/images/cabai.jpg">
+				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur dark:text-gray-700">2019</label>
 			</div>
 			
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -175,7 +175,7 @@
 		<div class="flex space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row-reverse space-x-reverse">
 			<div class="w-6/12 relative">
 				<img class="h-full object-cover rounded-2xl w-full" src="../assets/images/kjm.jpg">
-				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute">2018</label>
+				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute dark:text-gray-700">2018</label>
 			</div>
 
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -198,7 +198,7 @@
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row space-x">
 			<div class="md:w-6/12 w-full relative">
 				<img class="h-80 object-cover rounded-2xl w-full" src="../assets/images/adn.jpg">
-				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur ">2022</label>
+				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur dark:text-gray-700">2022</label>
 			</div>
 			
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
@@ -220,7 +220,7 @@
 		<div class="flex space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row-reverse space-x-reverse">
 			<div class="w-6/12 relative">
 				<img class="h-80 object-cover rounded-2xl w-full" src="../assets/images/aim.jpg">
-				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute">2015</label>
+				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute dark:text-gray-700">2015</label>
 			</div>
 
 			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">

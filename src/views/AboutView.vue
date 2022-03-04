@@ -2,7 +2,7 @@
   import Logos from '@/components/Logos.vue'
 </script>
 <template>
-  <div class=" flex flex-col space-y-20 px-8 md:px-0">
+  <div class=" flex flex-col space-y-20 px-8 md:px-0 md:my-20">
     <div class="flex flex-col space-y-10">
      <h1 class="text-4xl font-semibold tracking-wider text-center">
       About Me
@@ -14,7 +14,7 @@
   </div>
 
   <div class="mx-auto flex flex-col space-y-4">
-    <label class="font-semibold text-2xl text-center">Tools</label>
+    <label class="font-semibold text-2xl text-center">Playing Ground</label>
     <div class="md:flex md:flex-row md:space-x-8 grid grid-cols-4 gap-10 md:gap-0">
       <img src="../assets/html.png" class="object-contain w-12">
       <img src="../assets/php.png" class="object-contain w-12">

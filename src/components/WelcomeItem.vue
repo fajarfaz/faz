@@ -1,11 +1,11 @@
 <template>
-  <div class="item">
-    <i>
-      <slot name="icon"></slot>
+  <div class="item dark:border-white dark:text-gray-300 duration-300 dark:border-white ">
+    <i class="dark:border-white duration-300 bg-white dark:bg-gray-700 dark:text-white">
+      <slot name="icon" ></slot>
     </i>
     <div class="details">
-      <h3>
-        <slot name="heading"></slot>
+      <h3 class="dark:text-white duration-300">
+        <slot name="heading" ></slot>
       </h3>
       <slot></slot>
     </div>
@@ -51,7 +51,7 @@ h3 {
     left: -26px;
     position: absolute;
     border: 1px solid var(--color-border);
-    background: var(--color-background);
+   
     border-radius: 8px;
     width: 50px;
     height: 50px;
@@ -60,6 +60,7 @@ h3 {
   .item:before {
     content: ' ';
     border-left: 1px solid var(--color-border);
+
     position: absolute;
     left: 0;
     bottom: calc(50% + 25px);

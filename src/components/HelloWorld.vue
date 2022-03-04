@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div class="greetings">
-    <h1 class="text-gray-700">{{ msg }}</h1>
+    <h1 class="text-gray-700 dark:text-white">{{ msg }}</h1>
     <h3>
      Specializes in front-end development and sometimes helps with back-end development or IT support as a team work.
     
