@@ -13,7 +13,7 @@
 
   <header class="fixed top-0  z-10 h-20" v-show="$route.path!=='/'"> 
 
-    <nav class="fixed flex flex-row bg-white top-0  px-24 py-10 w-full">
+    <nav class="fixed flex flex-row bg-white top-0 md:px-24 px-8 md:py-10 py-6 w-full">
       <div class="md:flex hidden flex-row justify-between w-full items-center">
         <RouterLink to="/">
           <img src="@/assets/logo.svg" class="h-14">
@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <div  class="flex md:hidden">   
+      <div  class="flex md:hidden ">   
 
         <button
         @click="navClick = !navClick"
@@ -49,32 +49,27 @@
       </button>
     </div>
     <label v-if="navClick"></label>
-    <ul 
-    v-else
-    class="
-    flex-col
-    mt-8
-    space-y-4 bg-gray-700
-    md:hidden flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
-    "
-    >
-    <li class="text-gray-100 hover:text-indigo-400">Home</li>
-    <li class="text-gray-100 hover:text-indigo-400">About</li>
-    <li class="text-gray-100 hover:text-indigo-400">Blogs</li>
-    <li class="text-gray-100 hover:text-indigo-400">Contact Us</li>
-  </ul>
+  
+    <div v-else class="md:hidden flex  flex-row space-x-8 items-center ml-5"  >
+      <RouterLink :class="{ isActive:$route.path==='/portfolio' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/portfolio">Portfolio</RouterLink>
+      <RouterLink :class="{ isActive:$route.path==='/blog' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/blog">Blog</RouterLink>
+      <RouterLink :class="{ isActive:$route.path==='/about' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/about">About</RouterLink>       
+      <button class="bg-gray-100 rounded-full p-2 h-min flex hover:bg-gray-700 hover:stroke-white duration-300 w-min m-auto">
+        <SunIcon class="w-6 h-6" />
+      </button>
+    </div>
 
 </nav>   
 
 </header>
 
-<RouterView class="px-24 mt-[10em]" v-slot="{ Component }">
+<RouterView class="md:px-24 px-8 mt-[10em]" v-slot="{ Component }">
   <transition name="fade" mode="out-in">
     <component :is="Component" ></component>
   </transition>
 </RouterView>
 
-<Logos msg="Copyright 2022"/>
+
 </template>
 
 <style>
