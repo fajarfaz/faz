@@ -1,56 +1,70 @@
 <template>
-	<main class="w-full grid gap-20 md:gap-28">
+	<main class="w-full">
 		<div class="flex flex-col space-y-2 items-center justify-center text-lg text-center md:text-left md:mt-20"> 
-		<label class="text-5xl font-semibold tracking-wider text-center">Portfolio</label>
-		<label>My personal and team projects, always there if you need.</label>
+			<label class="text-5xl font-semibold tracking-wider text-center">Portfolio</label>
+			<label>My personal and team projects, always there if you need.</label>
 		</div>
-		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10 hover:shadow-md rounded-2xl duration-300">
-			<div class="md:w-6/12 w-full relative">
-				<img class="h-full object-fill w-full rounded-2xl" src="../assets/images/salsproject.jpg">
-				<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur dark:text-gray-700">2022</label>
-			</div>
 
-			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:py-4 py-2 px-4 md:px-4">
-				<div class="flex flex-col space-y-1 md:space-y-4 mt-2 md:mt-0">
-					<h1 class="md:text-4xl text-3xl font-semibold tracking-wider">SALSPROJECT</h1>
-					<label class="md:text-lg text-base">e-commerce website as a promotional tool, product sales and orders, travel here <a href="salsproject.com" class="hover:bg-green-200 duration-300 cursor-pointer"> <code>salsproject.com</code></a></label>
+		<div class="grid gap-20 md:gap-28 my-20 " v-for="portfolio in portfolios " v-bind:key="portfolio.id"  track-by="portfolio.id">			
+			<div v-if="portfolio.id %2!=0 " class="flex flex-col md:flex-row space-x-0 md:space-x-10 hover:shadow-md rounded-2xl duration-300">
+				<div class="md:w-6/12 w-full relative">
+					<img class="h-full object-fill w-full rounded-2xl" v-bind:src="'../src/assets/images/' + portfolio.image ">
+					<label class="bg-white/30 font-semibold border px-4 py-2 rounded-lg bottom-5 left-5 absolute shadow-xl backdrop-blur dark:text-gray-700">2022</label>
 				</div>
-				<div class="flex flex-col space-y-4">
-					<h1 class="text-xl md:text-2xl font-semibold">Tech Stack</h1>
-					<div class="flex flex-row px-4 space-x-8 overflow-x-auto">
-						<img src="../assets/laravel.png" class="object-contain w-12 snap-center shrink-0 ">
-						<img src="../assets/tailwind.png" class="object-contain w-12 snap-center shrink-0 ">
-						<img src="../assets/mysql.png" class="object-contain w-12 snap-center shrink-0 ">
-						<img src="../assets/alpine.png" class="object-contain w-12 snap-center shrink-0 ">
-						<img src="../assets/node.png" class="object-contain w-12 snap-center shrink-0 ">
+
+				<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:py-4 py-2 px-4 md:px-4">
+					<div class="flex flex-col space-y-1 md:space-y-4 mt-2 md:mt-0">
+						<h1 class="md:text-4xl text-3xl font-semibold tracking-wider">{{ portfolio.title }}</h1>
+						<label class="md:text-lg text-base" v-html="portfolio.desc"></label>
 					</div>
-				</div>
-			</div>			
-		</div>
-
-		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300 flex-row-reverse space-x-reverse">
-			<div class="md:w-6/12 w-full relative">
-				<img class="h-80 object-cover rounded-2xl" src="../assets/images/management.jpg">
-				<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute dark:text-gray-700">2021</label>
+					<div class="flex flex-col space-y-4">
+						<h1 class="text-xl md:text-2xl font-semibold">Tech Stack</h1>
+						<div class="flex flex-row px-4 space-x-8 overflow-x-auto">
+							<img src="../assets/laravel.png" class="object-contain w-12 snap-center shrink-0 ">
+							<img src="../assets/tailwind.png" class="object-contain w-12 snap-center shrink-0 ">
+							<img src="../assets/mysql.png" class="object-contain w-12 snap-center shrink-0 ">
+							<img src="../assets/alpine.png" class="object-contain w-12 snap-center shrink-0 ">
+							<img src="../assets/node.png" class="object-contain w-12 snap-center shrink-0 ">
+						</div>
+					</div>
+				</div>			
 			</div>
 			
-			<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
-				<div class="flex flex-col space-y-1 md:space-y-4 mt-2 md:mt-0">
-					<h1 class="md:text-4xl text-3xl font-semibold tracking-wider">24Slides Management Apps</h1>
-					<label class="md:text-lg text-base">Control app for application package management <a href="https://github.com/aliramadhan/dsspbi.git" class="hover:bg-green-200 duration-300 cursor-pointer"> <code>github</code></a></label>
+			<div v-else class="flex flex-col md:flex-row-reverse space-x-0 md:space-x-10 hover:shadow-md rounded-2xl duration-300 md:space-x-reverse">
+				<div class="md:w-6/12 w-full relative">
+					<img class="h-full w-full object-cover rounded-2xl" v-bind:src="'../src/assets/images/' + portfolio.image ">
+					<label class="bg-white/30 backdrop-blur shadow-lg font-semibold px-4 py-2 rounded-lg bottom-5 right-5 absolute dark:text-gray-700">2021</label>
 				</div>
-				<div class="flex flex-col space-y-4">
-					<h1 class="text-xl md:text-2xl font-semibold">Tech Stack</h1>
-					<div class="flex flex-row px-4 space-x-8 snap-x overflow-x-auto">
-						<img src="../assets/laravel.png" class="object-contain w-12 nap-center shrink-0">
-						<img src="../assets/bootstrap.png" class="object-contain w-12 nap-center shrink-0">
-						<img src="../assets/mysql.png" class="object-contain w-12 nap-center shrink-0">
-						<img src="../assets/alpine.png" class="object-contain w-12 nap-center shrink-0">
-						<img src="../assets/node.png" class="object-contain w-12 nap-center shrink-0">
+
+				<div class="md:w-6/12 w-full flex flex-col space-y-10 my-auto md:p-4 p-2">
+					<div class="flex flex-col space-y-1 md:space-y-4 mt-2 md:mt-0">
+						<h1 class="md:text-4xl text-3xl font-semibold tracking-wider">{{ portfolio.title }}</h1>
+						<label class="md:text-lg text-base" v-html="portfolio.desc"></label>
 					</div>
-				</div>
-			</div>			
+					<div class="flex flex-col space-y-4">
+						<h1 class="text-xl md:text-2xl font-semibold">Tech Stack</h1>
+
+						<div class="flex flex-row px-4 space-x-8 snap-x overflow-x-auto" >
+							<div v-for="techStack in portfolio.tech">
+								
+								<img v-if="'laravel' == techStack" src="../assets/laravel.png" class="object-contain w-12 snap-center shrink-0">
+								<img v-else-if="techStack == 'tailwind'" src="../assets/tailwind.png" class="object-contain w-12 snap-center shrink-0">
+								<img v-else-if="techStack == 'bootstrap'" src="../assets/bootstrap.png" class="object-contain w-12 snap-center shrink-0">
+								<img v-else-if="techStack == 'mysql'" src="../assets/mysql.png" class="object-contain w-12 snap-center shrink-0">
+								<img v-else-if="techStack == 'alpine'" src="../assets/alpine.png" class="object-contain w-12 snap-center shrink-0">
+								<img  v-else-if="techStack == 'gcp'" src="../assets/gcp.png" class="object-contain w-12 snap-center shrink-0">
+								<img v-else src="../assets/node.png" class="object-contain w-12 snap-center shrink-0">
+							</div>
+						</div>
+
+					</div>
+				</div>			
+			</div>
+
+
 		</div>
+
+
 
 		<div class="flex flex-col md:flex-row space-x-0 md:space-x-10  hover:shadow-md rounded-2xl duration-300">
 			<div class="md:w-6/12 w-full relative ">
@@ -242,6 +256,23 @@
 		
 	</main>	
 </template>
+
+
+
+<script >
+	import { useLoadPortfolios } from '@/firebase'
+	export default{
+		name : "portfolio",
+		data : function() {
+			const portfolios = useLoadPortfolios()
+			return { 
+				portfolios        		
+			}			
+		},
+		components: {}
+	}
+
+</script>
 
 <style scoped>
 

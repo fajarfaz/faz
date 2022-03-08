@@ -20,9 +20,9 @@
         <SunIcon class="w-6 h-6"  v-if="isDark"/>
         <MoonIcon class="w-6 h-6" v-else />
       </button>
-      <button class="bg-gray-100 rounded-full p-2 flex hover:bg-gray-700 hover:text-white duration-300 w-min mx-auto dark:text-gray-700 dark:hover:bg-gray-500 dark:hover:text-white">
+      <a href="https://api.whatsapp.com/send?phone=6288805455050" class="bg-gray-100 rounded-full p-2 flex hover:bg-gray-700 hover:text-white duration-300 w-min mx-auto dark:text-gray-700 dark:hover:bg-gray-500 dark:hover:text-white">
        <WhatsappIcon class="w-6 h-6" />
-     </button>
+     </a>
      </div>
    </div>
    <div class="wrapper">

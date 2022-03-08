@@ -9,7 +9,7 @@
     </h1>
 
     <p class="text-center text-lg">
-      Hey, I'm Fajar Faz. I'm a Web Developer from Malang, Indonesia.
+      Hey, I'm Fajar Faz. Work as Web Developer from Malang, Indonesia.
     </p>
   </div>
 
@@ -80,7 +80,7 @@
 
     </div>
   </div>
-
+    <div class="dark:bg-gray-700 fixed w-screen h-full inset-0 -z-10"> </div>
 </div>
 </template>
 

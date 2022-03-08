@@ -26,7 +26,7 @@
           <RouterLink :class="{ isActive:$route.path==='/about' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/about">About</RouterLink>       
           <button @click="isDark = !isDark" class="bg-gray-100 rounded-full p-2 h-min flex hover:bg-gray-700 hover:stroke-white duration-300 w-min m-auto">
             <SunIcon v-if="isDark" class="w-6 h-6" />
-            <MoonIcon v-else class="w-6 h-6 text-red-600"/>
+            <MoonIcon v-else class="w-6 h-6 text-gray-600"/>
           </button>
         </div>
       </div>
