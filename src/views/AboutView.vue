@@ -9,11 +9,11 @@
     </h1>
 
     <p class="text-center text-lg">
-      Hey, I'm Fajar Faz. Work as Web Developer from Malang, Indonesia.
+      Hey, I'm Fajar Faz from Malang, Indonesia.
     </p>
   </div>
 
-  <div class="mx-auto flex flex-col space-y-4">
+  <div class="mx-auto flex flex-col space-y-8">
     <label class="font-semibold text-2xl text-center">Playing Ground</label>
     <div class="md:flex md:flex-row md:space-x-8 grid grid-cols-4 gap-10 md:gap-0">
       <img src="../assets/html.png" class="object-contain w-12">
@@ -26,10 +26,12 @@
       <img src="../assets/node.png" class="object-contain w-12">    
       <img src="../assets/gcp.png" class="object-contain w-12">  
       <img src="../assets/figma.png" class="object-contain w-12">  
+      <img src="../assets/vue.png" class="object-contain w-12">  
+      <img src="../assets/firebase.png" class="object-contain w-12">  
     </div>
   </div>
 
-  <div class="mx-auto flex flex-col space-y-4">
+  <div class="mx-auto flex flex-col space-y-8">
     <label class="font-semibold text-2xl text-center">Timeline</label>
     <div class="flex flex-col space-y-2">
 

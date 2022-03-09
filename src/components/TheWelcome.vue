@@ -53,7 +53,7 @@
   </template>
   <template #heading>Social Media</template>
 
-  You can see me at <a href="https://dribbble.com/fajarfaz"> dribbble </a>, <a href="https://github.com/fajarfaz">github</a>, or <a href="mailto:fajarfaz@gmail.com">email</a>
+  You can see me on <a href="https://dribbble.com/fajarfaz"> dribbble </a>, <a href="https://github.com/fajarfaz">github</a>, or <a href="mailto:fajarfaz@gmail.com">email</a>
   
 </WelcomeItem>
 </template>

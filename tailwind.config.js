@@ -5,7 +5,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        '3xl': '0 7px 20px rgba(99 239 40 / 61%)'
+      }
+    },
   },
   plugins: [],
 }
