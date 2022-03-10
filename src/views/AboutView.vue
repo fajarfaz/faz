@@ -14,7 +14,7 @@
   </div>
 
   <div class="mx-auto flex flex-col space-y-8">
-    <label class="font-semibold text-2xl text-center">Playing Ground</label>
+    <label class="font-semibold text-2xl text-center">Playground</label>
     <div class="md:flex md:flex-row md:space-x-8 grid grid-cols-4 gap-10 md:gap-0">
       <img src="../assets/html.png" class="object-contain w-12">
       <img src="../assets/php.png" class="object-contain w-12">

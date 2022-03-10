@@ -43,7 +43,9 @@
 
 
 <template>
-  <div :class="isDark ? 'dark' : '' " class="transition-colors ease-in ease-out duration-700 ">
+  <Suspense>
+    <template #default>
+  <div :class="isDark ? 'dark' : '' " class="transition-colors  ease-out duration-700 ">
     <header class="fixed top-0  z-10 h-20" v-show="$route.path!=='/'"> 
 
       <nav class="fixed flex md:flex-row flex-col bg-white top-0 md:px-24 px-8 md:py-10 py-6 w-full dark:bg-gray-700 border-b border-gray-200 dark:text-gray-100 app">
@@ -52,9 +54,9 @@
             <img src="@/assets/logo.svg" class="h-14">
           </RouterLink>
           <div class="flex flex-row space-x-8 items-center"  >
-            <RouterLink :class="{ isActive:$route.path==='/portfolio' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/portfolio">Portfolio</RouterLink>
-            <RouterLink :class="{ isActive:$route.path==='/blog' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/blog">Blog</RouterLink>
-            <RouterLink :class="{ isActive:$route.path==='/about' }" class="text-lg hover:text-green-500 duration-300 tracking-wider" to="/about">About</RouterLink>       
+            <RouterLink :class="{ isActive:$route.path==='/portfolio' }" class="border-b-2 border-transparent text-lg hover:text-green-500 duration-300 tracking-wider" to="/portfolio">Portfolio</RouterLink>
+            <RouterLink :class="{ isActive:$route.path==='/blog' }" class="border-b-2 border-transparent text-lg hover:text-green-500 duration-300 tracking-wider" to="/blog">Blog</RouterLink>
+            <RouterLink :class="{ isActive:$route.path==='/about' }" class="border-b-2 border-transparent text-lg hover:text-green-500 duration-300 tracking-wider" to="/about">About</RouterLink>       
             <button  @click="isDark = !isDark" class="bg-gray-100 rounded-full p-2 h-min flex hover:bg-gray-700 hover:stroke-white duration-300 w-min m-auto">
               <SunIcon v-if="isDark" class="w-6 h-6" />
               <MoonIcon v-else class="w-6 h-6 text-gray-600"/>
@@ -101,7 +103,8 @@
 
 </header>
 
-<RouterView class="md:px-24 px-8 pt-[10em] dark:bg-gray-700 dark:text-white app h-full min-h-screen" :isDark="isDark" @toggle="toggle" v-slot="{ Component }">
+   
+<RouterView class="md:px-24 px-8 pt-[10em] dark:bg-gray-700 dark:text-white app  min-h-screen" :isDark="isDark" @toggle="toggle" v-slot="{ Component }">
   <transition name="fade" mode="out-in">
     <component :is="Component" >
 
@@ -109,7 +112,15 @@
 
   </transition>
 </RouterView >
+
+
+
 </div>
+</template>
+<template #fallback>
+    Loading...
+  </template>
+</Suspense>
 </template>
 
 <style>
@@ -118,7 +129,7 @@
      transition: background 0.3s ease-in-out;
   }
   .isActive{
-   @apply border-green-300 border-b-2;
+   @apply border-green-300 border-b-2 duration-300 ease-out;
  }
  /*route transition*/
 

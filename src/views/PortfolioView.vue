@@ -1,11 +1,12 @@
 <template>
-	<main class="w-full">
+	<main class="w-full pb-20">
 		<div class="flex flex-col space-y-2 items-center justify-center text-lg text-center md:text-left md:mt-20"> 
 			<label class="text-5xl font-semibold tracking-wider text-center">Portfolio</label>
 			<label>My personal and team projects, always there if you need.</label>
 		</div>
+	<TransitionGroup name="list" :duration="550">
+		<div class="grid gap-20 md:gap-28 my-20" v-for="portfolio in portfolios " v-bind:key="portfolio.id"  track-by="portfolio.id">			
 
-		<div class="grid gap-20 md:gap-28 my-20" v-for="portfolio in portfolios " v-bind:key="portfolio.id"  track-by="portfolio.id">			<Transition :duration="550">
 			<div v-if="portfolio.id == 11" class="flex flex-col md:flex-row space-x-0 md:space-x-10 hover:shadow-md rounded-2xl duration-300">
 
 				<div class="md:w-6/12 w-full relative">
@@ -112,12 +113,9 @@
 
 					</div>
 				</div>			
-			</div>
-			</Transition>
-
-
+			</div>	
 		</div>
-
+</TransitionGroup>
 		
 		
 		
@@ -148,13 +146,13 @@
 		font-family: Poppins, serif;
 	}
 	/* we will explain what these classes do next! */
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
 }
-
-.v-enter-from,
-.v-leave-to {
+.list-enter-from,
+.list-leave-to {
   opacity: 0;
+  transform: translateX(30px);
 }
 </style>
