@@ -43,7 +43,7 @@
    <div class="wrapper">
       <HelloWorld msg="Hi, Im Fajar Faz"/>
   
-      <nav class="flex flex-row md:flex-col lg:flex-row md:text-center space-x-4 md:justify-start justify-center text-lg md:mt-4 mt-10 text-base md:text-lg">
+      <nav class="grid grid-cols-3 md:flex-col lg:flex-row md:text-center space-x-4 md:justify-start justify-center text-lg md:mt-4 mt-10 text-base md:text-lg">
         <RouterLink class="px-4 hover:bg-green-300 hover:text-gray-900 duration-300 border " to="/portfolio">Portfolio</RouterLink>
         <RouterLink class="px-4 hover:bg-green-300 hover:text-gray-900 duration-300 border " to="/blog">Blog</RouterLink>
         <RouterLink class="px-4 hover:bg-green-300 hover:text-gray-900 duration-300 border " to="/about">About</RouterLink>    
