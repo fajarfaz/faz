@@ -13,13 +13,13 @@ import { ref, onUnmounted } from 'vue'
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const config = {
-      apiKey: "AIzaSyCuVNZo9j6IK_azbbaGrHxWCq1SQIUOVKQ",
-      authDomain: "fazweb-fd34e.firebaseapp.com",
-      projectId: "fazweb-fd34e",
-      storageBucket: "fazweb-fd34e.appspot.com",
-      messagingSenderId: "753269671192",
-      appId: "1:753269671192:web:20df071a7705c0e59b8a6d",
-      measurementId: "G-WV78ZQVTRQ"
+      apiKey: "Your API",
+      authDomain: "fazweb-fsdd34aae.firebaseapp.com",
+      projectId: "fazweb-fdasde",
+      storageBucket: "fazweb-fad34e.appspot.com",
+      messagingSenderId: "75311160211912",
+      appId: "1:75326967asd1192:web:20df07211a7705c0dsae59b8a6d",
+      measurementId: "G-WV782352ZQVLRQ"
     };
 
     // Initialize Firebase
