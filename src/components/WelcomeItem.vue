@@ -1,6 +1,6 @@
 <template>
   <div class="item dark:border-white dark:text-gray-300 duration-300 dark:border-white ">
-    <i class="dark:border-white duration-300 bg-white dark:bg-gray-700 dark:text-white">
+    <i class="dark:border-white duration-300 bg-white dark:bg-white/20 shadow-md dark:hover:border-orange-300 dark:hover:text-orange-500 dark:backdrop-blur-md dark:text-white">
       <slot name="icon" ></slot>
     </i>
     <div class="details">

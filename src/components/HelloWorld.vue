@@ -7,10 +7,9 @@ defineProps<{
 <template>
   <div class="greetings">
     <h1 class="text-gray-700 dark:text-white lg:text-4xl text-3xl font-semibold lg:mb-4 md:mb-8">{{ msg }}</h1>
-    <h3 class="text-base md:text-xl leading-relaxed mt-2 md:mt-0">
-     Specializes in front-end development and sometimes helps with back-end development or IT support as a team work.
-    
-    </h3>
+    <h2 class="text-base md:text-lg leading-relaxed mt-2 md:mt-0">
+     I am the web developer from indonesia, usually handle simple and complex projects individually or in team work, for more info you can see on this web page
+    </h2>
   </div>
 </template>
 
