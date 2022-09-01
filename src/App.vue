@@ -51,7 +51,7 @@
 
 <template>
  <metainfo>
-  <template v-slot:title="{ content }">{{ content ? `${content} | fajarfaz` : `SITE_NAME` }}</template>
+  <template v-slot:title="{ content }">{{ content ? `${content} | Fajar Faz` : `Fajar Faz` }}</template>
 </metainfo>
 
 <Suspense>
